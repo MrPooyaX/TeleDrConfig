@@ -29,7 +29,7 @@
          "settings": {
             "vnext": [
                {
-                  "address": "khsj.versnp.info",
+                  "address": "kqo.komepsu.net",
                   "port": 443,
                   "users": [
                      {
@@ -47,12 +47,12 @@
             "security": "tls",
             "tlssettings": {
                "allowInsecure": false,
-               "serverName": "khsj.versnp.info"
+               "serverName": "kqo.komepsu.net"
             },
             "wssettings": {
                "connectionReuse": true,
                "headers": {
-                  "Host": "khsj.versnp.info",
+                  "Host": "kqo.komepsu.net",
                   "User-Agent": "okhttp/3.10.0"
                },
                "path": "/"
