@@ -1,97 +1,95 @@
 {
-   "dns": {
-      "servers": [
-         "1.1.1.1"
-      ]
-   },
-   "inbounds": [
-      {
-         "port": 30002,
-         "listen": "127.0.0.1",
-         "protocol": "socks",
-         "settings": {
-            "auth": "noauth",
-            "udp": true,
-            "userLevel": 8
-         },
-         "tag": "socks"
-      }
-   ],
-   "log": {
-      "loglevel": "none"
-   },
-   "outbounds": [
-      {
-         "mux": {
-            "enabled": false
-         },
-         "protocol": "vmess",
-         "settings": {
-            "vnext": [
-               {
-                  "address": "kqo.komepsu.net",
-                  "port": 443,
-                  "users": [
-                     {
-                        "alterId": 64,
-                        "id": "3b5e258e-8c5e-45d3-b7d2-02c8f5fc0bb2",
-                        "level": 8,
-                        "security": "auto"
-                     }
-                  ]
-               }
+  "dns": {
+    "servers": [
+      "1.1.1.1"
+    ]
+  },
+  "inbounds": [
+    {
+      "port": 30002,
+      "listen": "127.0.0.1",
+      "protocol": "socks",
+      "settings": {
+        "userLevel": 8
+      },
+      "tag": "http"
+    }
+  ],
+  "log": {
+    "loglevel": "none"
+  },
+  "outbounds": [
+    {
+      "mux": {
+        "enabled": false
+      },
+      "protocol": "vmess",
+      "settings": {
+        "vnext": [
+          {
+            "address": "ubytkag.rvxecgfhg.com",
+            "port": 443,
+            "users": [
+              {
+                "alterId": 64,
+                "id": "3b5e258e-8c5e-45d3-b7d2-02c8f5fc0bb2",
+                "level": 8,
+                "security": "auto"
+              }
             ]
-         },
-         "streamSettings": {
-            "network": "ws",
-            "security": "tls",
-            "tlssettings": {
-               "allowInsecure": false,
-               "serverName": "kqo.komepsu.net"
-            },
-            "wssettings": {
-               "connectionReuse": true,
-               "headers": {
-                  "Host": "kqo.komepsu.net",
-                  "User-Agent": "okhttp/3.10.0"
-               },
-               "path": "/"
-            }
-         },
-         "tag": "proxy"
+          }
+        ]
       },
-      {
-         "protocol": "freedom",
-         "settings": {},
-         "tag": "direct"
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "tlssettings": {
+          "allowInsecure": true,
+          "serverName": "ubytkag.rvxecgfhg.com"
+        },
+        "wssettings": {
+          "connectionReuse": true,
+          "headers": {
+            "Host": "ubytkag.rvxecgfhg.com",
+            "User-Agent": "okhttp/3.10.0"
+          },
+          "path": "/"
+        }
       },
-      {
-         "protocol": "blackhole",
-         "settings": {
-            "response": {
-               "type": "http"
-            }
-         },
-         "tag": "block"
+      "tag": "proxy"
+    },
+    {
+      "protocol": "freedom",
+      "settings": {},
+      "tag": "direct"
+    },
+    {
+      "protocol": "blackhole",
+      "settings": {
+        "response": {
+          "type": "http"
+        }
+      },
+      "tag": "block"
+    }
+  ],
+  "policy": {
+    "levels": {
+      "8": {
+        "connIdle": 300,
+        "downlinkOnly": 1,
+        "handshake": 4,
+        "uplinkOnly": 1
       }
-   ],
-   "policy": {
-      "levels": {
-         "8": {
-            "connIdle": 300,
-            "downlinkOnly": 1,
-            "handshake": 4,
-            "uplinkOnly": 1
-         }
-      },
-      "system": {
-         "statsInboundUplink": false,
-         "statsInboundDownlink": false
-      }
-   },
-   "routing": {
-      "domainStrategy": "IPIfNonMatch",
-      "rules": []
-   },
-   "stats": {}
+    },
+    "system": {
+      "statsInboundUplink": false,
+      "statsInboundDownlink": false
+    }
+  },
+  "routing": {
+    "domainStrategy": "IPIfNonMatch",
+    "rules": []
+  },
+  "stats": {}
 }
