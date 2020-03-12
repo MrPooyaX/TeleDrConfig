@@ -10,8 +10,6 @@
       "listen": "127.0.0.1",
       "protocol": "socks",
       "settings": {
-        "auth": "noauth",
-        "udp": true,
         "userLevel": 8
       },
       "tag": "socks"
@@ -29,7 +27,7 @@
       "settings": {
         "vnext": [
           {
-            "address": "fuayg.gernro.cloud",
+            "address": "llajv.rebldp.tech",
             "port": 443,
             "users": [
               {
@@ -46,18 +44,17 @@
         "network": "ws",
         "security": "tls",
         "tlssettings": {
-          "allowInsecure": false,
+          "allowInsecure": true,
           "alpn": [
-            "http/1.1",
-            "h2"
+            "http\\1.1"
           ],
-          "serverName": "fuayg.gernro.cloud"
+          "serverName": "llajv.rebldp.tech"
         },
         "wssettings": {
           "connectionReuse": true,
           "headers": {
-            "Host": "fuayg.gernro.cloud",
-            "User-Agent": "okhttp/3.10.0"
+            "Host": "llajv.rebldp.tech",
+            "User-Agent": "Mozilla/5.0 (Android 9; Mobile; rv:68.0) Gecko/68.0 Firefox/68.0"
           },
           "path": "/"
         }
