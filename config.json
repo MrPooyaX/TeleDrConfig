@@ -10,11 +10,9 @@
       "listen": "127.0.0.1",
       "protocol": "socks",
       "settings": {
-        "auth": "noauth",
-        "udp": true,
         "userLevel": 8
       },
-      "tag": "socks"
+      "tag": "http"
     }
   ],
   "log": {
@@ -29,7 +27,7 @@
       "settings": {
         "vnext": [
           {
-            "address": "qwk.jzbkrw.info",
+            "address": "xey.wrxjys.tech",
             "port": 443,
             "users": [
               {
@@ -46,18 +44,17 @@
         "network": "ws",
         "security": "tls",
         "tlssettings": {
-          "allowInsecure": false,
+          "allowInsecure": true,
           "alpn": [
-            "http/1.1",
-            "h3-8"
+            "http\\2"
           ],
-          "serverName": "qwk.jzbkrw.info"
+          "serverName": "xey.wrxjys.tech"
         },
         "wssettings": {
           "connectionReuse": true,
           "headers": {
-            "Host": "qwk.jzbkrw.info",
-            "User-Agent": "okhttp/3.10.0"
+            "Host": "xey.wrxjys.tech",
+            "User-Agent": "Mozilla/5.0 (Android 9; Mobile; rv:68.0) Gecko/68.0 Firefox/68.0"
           },
           "path": "/"
         }
